@@ -3,7 +3,8 @@ name = "five-star-stream"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.8, <3.13"
 dependencies = [
+    "nuitka>=2.7.11",
     "requests>=2.32.4",
 ]
