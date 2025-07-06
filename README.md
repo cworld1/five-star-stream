@@ -8,6 +8,14 @@ Watch Five Sports Stream as you like 😉
 
 ## Introduction 介绍
 
+- 目标：实现五星体育直播流转发，不再局限于限制重重的微信内置浏览器，可以使用项目自带的 Web 播放器或自己喜爱的直播流/流媒体播放器放映。
+- 门槛：你可能需要一台 windows 电脑、能抓包五星体育微信的设备。可能比较吃技术。
+- 声明：项目只负责将“五星体育微信号直播”提取出来，以便换到更大屏幕上，更好地观看。项目既没有逆向代码，也没有服务器参与，纯本地化，仅供学习交流。
+
+至于为什么能够卡“版权保护”的 bug，不关我事，我真的什么也没做。
+
+## Usage 使用
+
 ### 准备
 
 1. 一台能运行程序的设备（Windows 端我已打包好，其他平台需要自己配置项目）
@@ -55,11 +63,11 @@ Watch Five Sports Stream as you like 😉
 
 ### 启动直播流
 
-打开你喜欢的直播流程序（VLC/PotPlayer/腾讯播放器/MXPlayer/KMPlayer/...），然后键入：
+打开你喜欢的直播流程序（[项目自带的 Web 播放器](http://localhost:5623)/VLC/PotPlayer/MXPlayer/KMPlayer/...），然后键入：
 
 `http://localhost:5623/<你抓包的地址>`
 
-如：`http://localhost:5623/https://cms-tvflow.gsports.net.cn/wxtv/epg001.m3u8?auth_key=xxxxxxxxxxxxx`
+> 如：`http://localhost:5623/https://cms-tvflow.gsports.net.cn/wxtv/epg001.m3u8?auth_key=xxxxxxxxxxxxx`
 
 项目也支持精简地址如：`http://localhost:5623/epg001.m3u8?auth_key=xxxxxxxxxxxxx`
 
@@ -76,7 +84,7 @@ Watch Five Sports Stream as you like 😉
 > - 问：支持什么车队？
 > - 答：窝法乙烷
 
-## Development
+## Development 开发
 
 Requirement:
 
@@ -110,10 +118,10 @@ uv run nuitka --follow-imports --onefile ./main.py
 
 Check out the [deployment documentation](https://github.com/Nuitka/Nuitka#tutorial-setup-and-build-on-windows) for more information.
 
-## Contributions
+## Contributions 贡献
 
 To spend more time coding and less time fiddling with whitespace, this project uses code conventions and styles to encourage consistency. Code with a consistent style is easier (and less error-prone!) to review, maintain, and understand.
 
-## License
+## License 许可
 
 This project is licensed under the GPL-3 License.
