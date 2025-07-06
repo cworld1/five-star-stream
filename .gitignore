@@ -9,5 +9,13 @@ wheels/
 # Virtual environments
 .venv
 
+# Nuitka
+/main.build/
+/main.dist/
+/main.onefile-build/
+/main.cmd
+/main.exe
+/nuitka-crash-report.xml
+
 # Customize
 /test.txt
