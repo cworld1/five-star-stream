@@ -1,6 +1,7 @@
 import urllib.parse
 import requests
 import http.server
+from webPlayer.webServer import WebServer
 
 BASE_URL = "https://cms-tvflow.gsports.net.cn/wxtv/"
 
@@ -27,11 +28,27 @@ class ProxyHandler(http.server.BaseHTTPRequestHandler):
 
         path = urllib.parse.urlparse(url).path
 
+        if path == "":
+            WebServer.send_static_html(self)
+            return
+
         # If it is m3u8 file
         if path.endswith(".m3u8"):
             self.handle_m3u8_request(url)
         else:
             self.handle_other_requests(url)
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")  # 允许所有域名
+        self.send_header(
+            "Access-Control-Allow-Methods", "GET, POST, OPTIONS"
+        )  # 允许的请求方法
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")  # 允许的请求头
+        self.end_headers()
+
+    def end_headers(self):
+        super().end_headers()
 
     def construct_url(self, path):
         # Remove the "/" at the beginning first
@@ -70,6 +87,7 @@ class ProxyHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", "application/vnd.apple.mpegurl")
             self.send_header("Content-Length", str(len(new_m3u8.encode("utf-8"))))
+            self.send_header("Access-Control-Allow-Origin", "*")  # CORS header
             self.end_headers()
             self.wfile.write(new_m3u8.encode("utf-8"))
 
