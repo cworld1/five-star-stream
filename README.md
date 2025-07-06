@@ -6,6 +6,8 @@ Watch Five Sports Stream as you like 😉
 
 [![GitHub License](https://img.shields.io/github/license/cworld1/five-star-stream?style=flat)](https://github.com/cworld1/five-star-stream/blob/main/LICENSE)
 
+![alt text](.github/assets/2025-7-6_20-53-55.png)
+
 ## Introduction 介绍
 
 - 目标：实现五星体育直播流转发，不再局限于限制重重的微信内置浏览器，可以使用项目自带的 Web 播放器或自己喜爱的直播流/流媒体播放器放映。
