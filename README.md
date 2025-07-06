@@ -48,14 +48,14 @@ Watch Five Sports Stream as you like 😉
 
 1. 获取程序。你可以：
 
-   - 直接使用我打包好的（目前只提供 Windows 版本）
+   - 直接使用我打包好的（目前只提供 Windows 版本）：[GitHub Release](https://github.com/cworld1/five-star-stream/releases/latest) | [v0.1.0 国内镜像](https://gh-proxy.com/github.com/cworld1/five-star-stream/releases/download/v0.1.0/five-star-stream.exe)
    - 或者自己配置项目（后文会讲）
 
 2. 运行它。
 
 ### 启动直播流
 
-打开你喜欢的直播流程序，然后键入：
+打开你喜欢的直播流程序（VLC/PotPlayer/腾讯播放器/MXPlayer/KMPlayer/...），然后键入：
 
 `http://localhost:5623/<你抓包的地址>`
 
